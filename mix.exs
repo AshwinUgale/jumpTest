@@ -2,16 +2,23 @@ defmodule JumpTest.MixProject do
   use Mix.Project
 
   def project do
-    [
-      app: :jumpTest,
-      version: "0.1.0",
-      elixir: "~> 1.14",
-      elixirc_paths: elixirc_paths(Mix.env()),
-      start_permanent: Mix.env() == :prod,
-      aliases: aliases(),
-      deps: deps()
+  [
+    app: :jumpTest,
+    version: "0.1.0",
+    elixir: "~> 1.14",
+    elixirc_paths: elixirc_paths(Mix.env()),
+    start_permanent: Mix.env() == :prod,
+    aliases: aliases(),
+    deps: deps(),
+    releases: [
+      jump_test: [
+        include_executables_for: [:unix],
+        steps: [:assemble, :tar]
+      ]
     ]
-  end
+  ]
+end
+
 
   # Configuration for the OTP application.
   #
