@@ -1,0 +1,18 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "esbuild js/app.js --bundle --target=es2017 --outdir=../priv/static/assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.25.2"
+  }
+}

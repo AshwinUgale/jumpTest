@@ -7,7 +7,7 @@
 # General application configuration
 import Config
 
-config :jump_test,
+config :jumpTest,
   ecto_repos: [JumpTest.Repo],
   generators: [timestamp_type: :utc_datetime]
 
